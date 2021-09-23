@@ -1,0 +1,7 @@
+work/
+*.pdf
+*.bak
+*.mti
+*.wlf
+**/[Tt]ranscript*
+*.mpf
