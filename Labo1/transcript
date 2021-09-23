@@ -1,0 +1,183 @@
+# Loading project Labo1
+compile full_adder_1_bit.sv
+# wrong # args: should be "compile w cmd ?arg ...?"
+# Compile of full_adder_1_bit.sv was successful.
+# Compile of full_adder_4_bit.sv was successful.
+# Compile of test_fulladder_4bit.sv was successful.
+# Compile of full_adder_8bit.sv was successful.
+# 4 compiles, 0 failed with no errors.
+view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# Compile of full_adder_1_bit.sv was successful.
+# Compile of full_adder_4_bit.sv was successful.
+# Compile of test_fulladder_4bit.sv was successful.
+# Compile of Homework_1.sv failed with 1 errors.
+# Compile of test_Homework_1.sv was successful.
+# 5 compiles, 1 failed with 1 error.
+# Compile of full_adder_1_bit.sv was successful.
+# Compile of full_adder_4_bit.sv was successful.
+# Compile of test_fulladder_4bit.sv was successful.
+# Compile of Homework_1.sv was successful.
+# Compile of test_Homework_1.sv was successful.
+# 5 compiles, 0 failed with no errors.
+# Load canceled
+# Load canceled
+# Load canceled
+# Compile of full_adder_1_bit.sv was successful.
+# Compile of full_adder_4_bit.sv was successful.
+# Compile of test_fulladder_4bit.sv was successful.
+# Compile of Homework_1.sv was successful.
+# Compile of test_Homework_1.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.test_Homework_1 -t ns
+# vsim work.test_Homework_1 -t ns 
+# Start time: 19:27:17 on Sep 23,2021
+# Loading sv_std.std
+# Loading work.test_Homework_1
+# Loading work.Homework_1
+# Loading work.full_adder_8_bit
+# Loading work.full_adder_1_bit
+# ** Error (suppressible): (vsim-3839) Variable '/test_Homework_1/FA_8BIT/DOUBLE/c_out', driven via a port connection, is multiply driven. See /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(80).
+#    Time: 0 ns  Iteration: 0  Instance: /test_Homework_1/FA_8BIT/DOUBLE/FA7 File: /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv Line: 108
+# ** Error (suppressible): (vsim-3839) Variable '/test_Homework_1/FA_8BIT/ADDONE/c_out', driven via a port connection, is multiply driven. See /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(80).
+#    Time: 0 ns  Iteration: 0  Instance: /test_Homework_1/FA_8BIT/ADDONE/FA7 File: /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv Line: 108
+# Error loading design
+# End time: 19:27:18 on Sep 23,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 10
+vsim work.test_Homework_1 -t ns
+# vsim work.test_Homework_1 -t ns 
+# Start time: 19:30:29 on Sep 23,2021
+# Loading sv_std.std
+# Loading work.test_Homework_1
+# Loading work.Homework_1
+# Loading work.full_adder_8_bit
+# Loading work.full_adder_1_bit
+# ** Error (suppressible): (vsim-3839) Variable '/test_Homework_1/FA_8BIT/DOUBLE/c_out', driven via a port connection, is multiply driven. See /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(80).
+#    Time: 0 ns  Iteration: 0  Instance: /test_Homework_1/FA_8BIT/DOUBLE/FA7 File: /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv Line: 108
+# ** Error (suppressible): (vsim-3839) Variable '/test_Homework_1/FA_8BIT/ADDONE/c_out', driven via a port connection, is multiply driven. See /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(80).
+#    Time: 0 ns  Iteration: 0  Instance: /test_Homework_1/FA_8BIT/ADDONE/FA7 File: /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv Line: 108
+# Error loading design
+# End time: 19:30:29 on Sep 23,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1
+# Compile of full_adder_1_bit.sv was successful.
+# Compile of full_adder_4_bit.sv was successful.
+# Compile of test_fulladder_4bit.sv was successful.
+# Compile of Homework_1.sv was successful.
+# Compile of test_Homework_1.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.test_Homework_1 -t ns
+# vsim work.test_Homework_1 -t ns 
+# Start time: 19:30:41 on Sep 23,2021
+# Loading sv_std.std
+# Loading work.test_Homework_1
+# Loading work.Homework_1
+# Loading work.full_adder_8_bit
+# Loading work.full_adder_1_bit
+# ** Error (suppressible): (vsim-3839) Variable '/test_Homework_1/FA_8BIT/DOUBLE/c_out', driven via a port connection, is multiply driven. See /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(78).
+#    Time: 0 ns  Iteration: 0  Instance: /test_Homework_1/FA_8BIT/DOUBLE/FA7 File: /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv Line: 106
+# ** Error (suppressible): (vsim-3839) Variable '/test_Homework_1/FA_8BIT/ADDONE/c_out', driven via a port connection, is multiply driven. See /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(78).
+#    Time: 0 ns  Iteration: 0  Instance: /test_Homework_1/FA_8BIT/ADDONE/FA7 File: /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv Line: 106
+# Error loading design
+# End time: 19:30:41 on Sep 23,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+vsim -t ns work.Homework_1
+# vsim -t ns work.Homework_1 
+# Start time: 19:30:59 on Sep 23,2021
+# Loading sv_std.std
+# Loading work.Homework_1
+# Loading work.full_adder_8_bit
+# Loading work.full_adder_1_bit
+# ** Error (suppressible): (vsim-3839) Variable '/Homework_1/DOUBLE/c_out', driven via a port connection, is multiply driven. See /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(78).
+#    Time: 0 ns  Iteration: 0  Instance: /Homework_1/DOUBLE/FA7 File: /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv Line: 106
+# ** Error (suppressible): (vsim-3839) Variable '/Homework_1/ADDONE/c_out', driven via a port connection, is multiply driven. See /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(78).
+#    Time: 0 ns  Iteration: 0  Instance: /Homework_1/ADDONE/FA7 File: /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv Line: 106
+# Error loading design
+# End time: 19:30:59 on Sep 23,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1
+# Compile of full_adder_1_bit.sv was successful.
+# Compile of full_adder_4_bit.sv was successful.
+# Compile of test_fulladder_4bit.sv was successful.
+# Compile of Homework_1.sv was successful.
+# Compile of test_Homework_1.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -t ns work.Homework_1
+# vsim -t ns work.Homework_1 
+# Start time: 19:34:16 on Sep 23,2021
+# Loading sv_std.std
+# Loading work.Homework_1
+# Loading work.full_adder_8_bit
+# Loading work.full_adder_1_bit
+vsim work.test_Homework_1 -t ns
+# End time: 19:37:06 on Sep 23,2021, Elapsed time: 0:02:50
+# Errors: 0, Warnings: 2
+# vsim work.test_Homework_1 -t ns 
+# Start time: 19:37:06 on Sep 23,2021
+# Loading sv_std.std
+# Loading work.test_Homework_1
+# Loading work.Homework_1
+# Loading work.full_adder_8_bit
+# Loading work.full_adder_1_bit
+run 5ns
+add wave -position insertpoint  \
+sim:/test_Homework_1/A \
+sim:/test_Homework_1/B \
+sim:/test_Homework_1/O \
+sim:/test_Homework_1/OUTPUT \
+sim:/test_Homework_1/SUM
+restart
+run 5ns
+# Compile of full_adder_1_bit.sv was successful.
+# Compile of full_adder_4_bit.sv was successful.
+# Compile of test_fulladder_4bit.sv was successful.
+# Compile of Homework_1.sv was successful.
+# Compile of test_Homework_1.sv failed with 15 errors.
+# 5 compiles, 1 failed with 15 errors.
+# Compile of full_adder_1_bit.sv was successful.
+# Compile of full_adder_4_bit.sv was successful.
+# Compile of test_fulladder_4bit.sv was successful.
+# Compile of Homework_1.sv was successful.
+# Compile of test_Homework_1.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.test_Homework_1 -t ns
+# End time: 19:39:52 on Sep 23,2021, Elapsed time: 0:02:46
+# Errors: 0, Warnings: 3
+# vsim work.test_Homework_1 -t ns 
+# Start time: 19:39:52 on Sep 23,2021
+# Loading sv_std.std
+# Loading work.test_Homework_1
+# Loading work.Homework_1
+# Loading work.full_adder_8_bit
+# Loading work.full_adder_1_bit
+# Compile of full_adder_1_bit.sv was successful.
+# Compile of full_adder_4_bit.sv was successful.
+# Compile of test_fulladder_4bit.sv was successful.
+# Compile of Homework_1.sv was successful.
+# Compile of test_Homework_1.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.test_Homework_1 -t ns
+# End time: 19:45:05 on Sep 23,2021, Elapsed time: 0:05:13
+# Errors: 0, Warnings: 2
+# vsim work.test_Homework_1 -t ns 
+# Start time: 19:45:05 on Sep 23,2021
+# Loading sv_std.std
+# Loading work.test_Homework_1
+# Loading work.Homework_1
+# Loading work.full_adder_8_bit
+# Loading work.full_adder_1_bit
+run 5ns
+# Compile of full_adder_1_bit.sv was successful.
+# Compile of full_adder_4_bit.sv was successful.
+# Compile of test_fulladder_4bit.sv was successful.
+# Compile of Homework_1.sv failed with 3 errors.
+# Compile of test_Homework_1.sv was successful.
+# 5 compiles, 1 failed with 3 errors.
+# Compile of full_adder_1_bit.sv was successful.
+# Compile of full_adder_4_bit.sv was successful.
+# Compile of test_fulladder_4bit.sv was successful.
+# Compile of Homework_1.sv was successful.
+# Compile of test_Homework_1.sv was successful.
+# 5 compiles, 0 failed with no errors.
+# End time: 21:30:58 on Sep 23,2021, Elapsed time: 1:45:53
+# Errors: 0, Warnings: 3

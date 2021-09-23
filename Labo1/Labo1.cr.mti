@@ -1,0 +1,39 @@
+/home/guillaume/Programmes/LELEC2531/Labo1/test_Homework_1.sv {1 {vlog -work work -sv -stats=none /home/guillaume/Programmes/LELEC2531/Labo1/test_Homework_1.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module test_Homework_1
+
+Top level modules:
+	test_Homework_1
+
+} {} {}} /home/guillaume/Programmes/LELEC2531/Labo1/full_adder_4_bit.sv {1 {vlog -work work -sv -stats=none /home/guillaume/Programmes/LELEC2531/Labo1/full_adder_4_bit.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module full_adder_4_bit
+
+Top level modules:
+	full_adder_4_bit
+
+} {} {}} /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv {1 {vlog -work work -sv -stats=none /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Homework_1
+-- Compiling module subtract
+-- Compiling module full_adder_8_bit
+
+Top level modules:
+	Homework_1
+	subtract
+
+} {} {}} /home/guillaume/Programmes/LELEC2531/Labo1/test_fulladder_4bit.sv {1 {vlog -work work -sv -stats=none /home/guillaume/Programmes/LELEC2531/Labo1/test_fulladder_4bit.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module test_fulladder_4bit
+
+Top level modules:
+	test_fulladder_4bit
+
+} {} {}} /home/guillaume/Programmes/LELEC2531/Labo1/full_adder_1_bit.sv {1 {vlog -work work -sv -stats=none /home/guillaume/Programmes/LELEC2531/Labo1/full_adder_1_bit.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module full_adder_1_bit
+
+Top level modules:
+	full_adder_1_bit
+
+} {} {}}
