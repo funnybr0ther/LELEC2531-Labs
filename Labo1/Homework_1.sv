@@ -4,13 +4,25 @@ module Homework_1 (	input 	[7:0]	MyInput,
 	output 	[7:0]   MyOutput);
 	
 	wire[7:0] ConstantCopy;
+	wire[7:0] MyConstant;
+	wire[7:0] MyTrueConstant;
 	wire[7:0] DoubleMyConstant;
 	wire[7:0] AddTerm;
+	wire[7:0] SubtractTerm;
+	wire[7:0] OperandTerm;
 	wire [7:0] One;
+
 	assign One = 8'd1;
 	wire C_IN;
 	assign C_IN = 1'b0;
 	assign ConstantCopy[1:0] = MyConstantSelect;
+	assign ConstantCopy[7:2] = 6'd0;
+	assign AddTerm = {8{~MyOperation}} & MyConstant;
+	wire[7:0] MinusMyConstant;
+	wire[7:0] MyNegativeConstant;
+	assign MinusMyConstant = ~MyConstant;
+	assign SubtractTerm = {8{MyOperation}} & MyNegativeConstant;
+
 	full_adder_8_bit DOUBLE (
 		.a(ConstantCopy),
 		.b(ConstantCopy),
@@ -22,41 +34,51 @@ module Homework_1 (	input 	[7:0]	MyInput,
 		.a(DoubleMyConstant),
 		.b(One),
 		.c_in(C_IN),
-		.sum(Addterm),
-		.c_out());** Error: (vlog-13069) /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(34): near ")": syntax error, unexpected ')'.
-** Error (suppressible): /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(44): (vlog-2388) 'C_IN' already declared in this scope (Homework_1) at /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(11).
-** Error: /home/guillaume/Programmes/LELEC2531/Labo1/Homework_1.sv(47): (vlog-2730) Undefined variable: 'B'.
--- Compiling module full_adder_8_bit
+		.sum(MyConstant),
+		.c_out());
 
+	full_adder_8_bit ADDONETOSIGNED (
+		.a(MinusMyConstant),
+		.b(One),
+		.c_in(C_IN),
+		.sum(MyNegativeConstant),
+		.c_out());
 
 
 	full_adder_8_bit ADD (
 		.a(MyInput),
-		.b(AddTerm),
+		.b(OperandTerm),
 		.c_in(C_IN),
 		.sum(MyOutput),
 		.c_out());
 
-endmodule
-
-module subtract (
-	input [7:0] A,
-	input [7:0] B,
-	output [7:0] Output);
-
-	wire [7:0] NegativeB;
-	wire C_IN;
-	assign C_IN = 1'b0;
-	wire C_OUT;
-	assign NegativeB = ~B;
-	full_adder_8_bit ADDER8 (
-		.a(A),
-		.b(NegativeB),
+	full_adder_8_bit ADDORSUB (
+		.a(AddTerm),
+		.b(SubtractTerm),
 		.c_in(C_IN),
-		.sum(Output),
-		.c_out(C_OUT));
+		.sum(OperandTerm),
+		.c_out());
 
 endmodule
+
+// module subtract (
+// 	input [7:0] A,
+// 	input [7:0] B,
+// 	output [7:0] Output);
+
+// 	wire [7:0] NegativeB;
+// 	wire C_IN;
+// 	assign C_IN = 1'b0;
+// 	wire C_OUT;
+// 	assign NegativeB = ~B;
+// 	full_adder_8_bit ADDER8 (
+// 		.a(A),
+// 		.b(NegativeB),
+// 		.c_in(C_IN),
+// 		.sum(Output),
+// 		.c_out(C_OUT));
+
+// endmodule
 
 module full_adder_8_bit ( 
 	input  logic [7:0] 	a,
@@ -122,4 +144,16 @@ full_adder_1_bit FA7 (
 	.c_in(c7),
 	.sum(sum[7]),
 	.c_out(c_out));		  
+endmodule
+
+module full_adder_1_bit ( 
+	input  logic a,
+	input  logic b,
+	input  logic c_in,
+	output logic sum,
+	output logic c_out);
+								  								  
+assign sum = a ^ b ^ c_in;
+assign c_out = (a & b) | ((a ^ b) & c_in);
+
 endmodule
